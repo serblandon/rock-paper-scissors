@@ -14,3 +14,12 @@ function playRound(playerSelection, computerSelection) {
     }
     
 }
+
+// initialize selections for both players
+playerSelection = "rock";
+computerSelection = getComputerChoice();
+
+// call the playround function for a single round
+playRound(playerSelection, computerSelection);
+
+console.log(computerSelection);
