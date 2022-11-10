@@ -62,6 +62,10 @@ function game() {
 
     // loop 5 times = play 5 rounds of the game
     while(playerScore != 5 && computerScore != 5) {
+        // get input choice from player and computer
+        let playerSelection = prompt("Choose: Rock/Paper/Scissors");
+        let computerSelection = getComputerChoice();
+
         // call the play round fct each time
         console.log(playRound(playerSelection, computerSelection));
         // check if returned string contains win or lose
@@ -85,17 +89,13 @@ function game() {
     }
 }
 
-// initialize selections for both players
-//let playerSelection = prompt("Choose: Rock/Paper/Scissors");
-let playerSelection = "rock";
-let computerSelection = getComputerChoice();
 
-// call the playround function for a single round
-console.log(playRound(playerSelection, computerSelection));
+/* call the playround function for a single round
+console.log(playRound(playerSelection, computerSelection)); */
 
-//printing both selections
+/*printing both selections
 console.log(`\nPlayer selection: ${playerSelection}`);
-console.log(`Computer selection: ${computerSelection}`);
+console.log(`Computer selection: ${computerSelection}`); */
 
 // test game function best of five
 game();
