@@ -48,9 +48,39 @@ function playRound(playerSelection, computerSelection) {
     
 }
 
+// function to display scores after each round
+function getScores(plyrScore, cmptScore) {
+    console.log(`Player score: ${plyrScore}`);
+    console.log(`Computer score: ${cmptScore}`);
+}
+
+// game function
+function game() {
+    // initialize and declare score cards for both players
+    let playerScore = 0;
+    let computerScore = 0;
+
+    // loop 5 times = play 5 rounds of the game
+    while(playerScore != 5 && computerScore != 5) {
+        // call the play round fct each time
+        console.log(playRound(playerSelection, computerSelection));
+        // check if returned string contains win or lose
+        if(playRound(playerSelection, computerSelection).includes("win")) {
+            // increment player score if they won
+            playerScore++;
+            getScores(playerScore, computerScore);
+        }
+        else if(playRound(playerSelection, computerSelection).includes("lose")) {
+            // increment computer score if player lost
+            computerScore++;
+            getScores(playerScore, computerScore);
+        }
+    }
+}
+
 // initialize selections for both players
-playerSelection = "rock";
-computerSelection = getComputerChoice();
+let playerSelection = "rock";
+let computerSelection = getComputerChoice();
 
 // call the playround function for a single round
 console.log(playRound(playerSelection, computerSelection));
@@ -58,3 +88,6 @@ console.log(playRound(playerSelection, computerSelection));
 //printing both selections
 console.log(`\nPlayer selection: ${playerSelection}`);
 console.log(`Computer selection: ${computerSelection}`);
+
+// test game function best of five
+game();
