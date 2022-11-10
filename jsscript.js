@@ -76,9 +76,17 @@ function game() {
             getScores(playerScore, computerScore);
         }
     }
+    // after loop is done the scores shall be checked and decide the winner
+    if(playerScore == 5) {
+        console.log("You won the game!!!");
+    }
+    else {
+        console.log("You lost the game! You were beaten by the computer");
+    }
 }
 
 // initialize selections for both players
+//let playerSelection = prompt("Choose: Rock/Paper/Scissors");
 let playerSelection = "rock";
 let computerSelection = getComputerChoice();
 
