@@ -74,17 +74,19 @@ function game() {
 
         // call the play round fct each time
         console.log(playRound(playerSelection, computerSelection));
+        
         // check if returned string contains win or lose
         if(playRound(playerSelection, computerSelection).includes("win")) {
             // increment player score if they won
             playerScore++;
-            getScores(playerScore, computerScore);
         }
         else if(playRound(playerSelection, computerSelection).includes("lose")) {
             // increment computer score if player lost
             computerScore++;
-            getScores(playerScore, computerScore);
         }
+        // display scores after each round
+        getScores(playerScore, computerScore);
+
         // display choices made by both players
         getChoices(playerSelection, computerSelection);
         console.log("\n");
