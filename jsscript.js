@@ -54,6 +54,12 @@ function getScores(plyrScore, cmptScore) {
     console.log(`Computer score: ${cmptScore}`);
 }
 
+// printing both selections
+function getChoices(plyrChoice, cmptChoice) {
+    console.log(`Player selection: ${plyrChoice}`);
+    console.log(`Computer selection: ${cmptChoice}`);
+}
+
 // game function
 function game() {
     // initialize and declare score cards for both players
@@ -79,6 +85,9 @@ function game() {
             computerScore++;
             getScores(playerScore, computerScore);
         }
+        // display choices made by both players
+        getChoices(playerSelection, computerSelection);
+        console.log("\n");
     }
     // after loop is done the scores shall be checked and decide the winner
     if(playerScore == 5) {
