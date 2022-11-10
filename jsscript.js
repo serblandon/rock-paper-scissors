@@ -9,8 +9,41 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
 
     // if both participants select the same nothing happens and it's a draw
-    if(playerSelection.toLowerCase() === computerSelection.toLowerCase()){
-        console.log("It's a draw!");
+    if(playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
+        return "It's a draw!";
+    }
+    // if choices are different
+    else {
+        // testing outcomes for player selection = rock
+        if(playerSelection.toLowerCase() === "rock") {
+            if(computerSelection.toLowerCase() === "paper") {
+                return "You lose! Paper beats Rock!";
+            }
+
+            if(computerSelection.toLowerCase() === "scissors") {
+                return "You win! Rock beats Scissors!";
+            }
+        }
+        // testing outcomes for player selection = paper
+        if(playerSelection.toLowerCase() === "paper") {
+            if(computerSelection.toLowerCase() === "scissors") {
+                return "You lose! Scissors beats Paper!";
+            }
+
+            if(computerSelection.toLowerCase() === "rock") {
+                return "You win! Paper beats Rock!";
+            }
+        }
+        // testing outcomes for player selection = scissors
+        if(playerSelection.toLowerCase() === "scissors") {
+            if(computerSelection.toLowerCase() === "rock") {
+                return "You lose! Rock beats Scissors!";
+            }
+
+            if(computerSelection.toLowerCase() === "paper") {
+                return "You win! Scissors beats Paper!";
+            }
+        }
     }
     
 }
@@ -20,6 +53,8 @@ playerSelection = "rock";
 computerSelection = getComputerChoice();
 
 // call the playround function for a single round
-playRound(playerSelection, computerSelection);
+console.log(playRound(playerSelection, computerSelection));
 
-console.log(computerSelection);
+//printing both selections
+console.log(`\nPlayer selection: ${playerSelection}`);
+console.log(`Computer selection: ${computerSelection}`);
