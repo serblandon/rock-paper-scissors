@@ -74,7 +74,7 @@ function game() {
 
         // call the play round fct each time
         console.log(playRound(playerSelection, computerSelection));
-        
+
         // check if returned string contains win or lose
         if(playRound(playerSelection, computerSelection).includes("win")) {
             // increment player score if they won
@@ -96,7 +96,7 @@ function game() {
         console.log("You won the game!!!");
     }
     else {
-        console.log("You lost the game! You were beaten by the computer");
+        console.log("You lost the game! You were beaten by the computer!");
     }
 }
 
