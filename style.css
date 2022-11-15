@@ -11,6 +11,8 @@ header {
     align-items: center;
     justify-content: center;
     font-family: 'Alex Brush', cursive;
+    background-color: #11202A;
+    color: #F5F5DC;
 }
 
 .title {
@@ -30,6 +32,7 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 13px;
+    /*background-image: url("images/orion-g008e59802_1920.jpg");*/
 }
 
 .choices {
@@ -61,4 +64,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #172D3B;
+    padding: 6px;
+    color: aliceblue;
 }
