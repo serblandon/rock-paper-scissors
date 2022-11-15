@@ -23,7 +23,7 @@ header {
 .headertext {
     padding-top: 0;
     margin-top: 0px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 main {
@@ -67,8 +67,13 @@ footer {
     background-color: #172D3B;
     padding: 6px;
     color: aliceblue;
+    font-family: 'Alex Brush', cursive;
 }
 
 .btn1, .btn2, .btn3 {
-    padding: 55px;
+    padding: 20px;
+}
+
+.legend {
+    font-size: 20px;
 }
