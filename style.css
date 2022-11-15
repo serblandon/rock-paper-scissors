@@ -43,12 +43,13 @@ main {
 
 .scorecard {
     display: flex;
-    gap: 70px;
+    gap: 80px;
 }
 
 .you, .computer {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .narative {
@@ -76,4 +77,9 @@ footer {
 
 .legend {
     font-size: 20px;
+}
+
+.btn1_cnt > p, .btn2_cnt > p, .btn3_cnt > p {
+    display: flex;
+    justify-content: center;
 }
