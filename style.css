@@ -17,7 +17,7 @@ header {
 
 .title {
     padding-bottom: 0px;
-    font-size: 55px;
+    font-size: 50px;
 }
 
 .headertext {
@@ -43,7 +43,7 @@ main {
 
 .scorecard {
     display: flex;
-    gap: 80px;
+    gap: 55px;
 }
 
 .you, .computer {
@@ -82,4 +82,18 @@ footer {
 .btn1_cnt > p, .btn2_cnt > p, .btn3_cnt > p {
     display: flex;
     justify-content: center;
+}
+
+.narative {
+    border-color: #172D3B;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: solid;
+    margin-bottom: 25px;
+    min-width: 200px;
+}
+
+.inter {
+    display: flex;
+    align-items: center;
 }
