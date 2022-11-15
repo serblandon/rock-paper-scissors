@@ -37,7 +37,7 @@ main {
 
 .choices {
     display: flex;
-    gap: 45px;
+    gap: 75px;
     padding-top: 20px;
 }
 
@@ -67,4 +67,8 @@ footer {
     background-color: #172D3B;
     padding: 6px;
     color: aliceblue;
+}
+
+.btn1, .btn2, .btn3 {
+    padding: 55px;
 }
