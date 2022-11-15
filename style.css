@@ -20,3 +20,36 @@ header {
     margin-top: 0px;
     font-size: 18px;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13px;
+}
+
+.choices {
+    display: flex;
+    gap: 45px;
+    padding-top: 20px;
+}
+
+.scorecard {
+    display: flex;
+    gap: 70px;
+}
+
+.you, .computer {
+    display: flex;
+    flex-direction: column;
+}
+
+.narative {
+    display: flex;
+    flex-direction: column;
+}
+
+.round {
+    text-align: center;
+}
