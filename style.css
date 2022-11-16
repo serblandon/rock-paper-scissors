@@ -18,7 +18,7 @@ header {
 
 .title {
     padding-bottom: 0px;
-    font-size: 55px;
+    font-size: 60px;
     margin-top: 30px;
     margin-bottom: 0px;
 }
@@ -69,7 +69,6 @@ footer {
     align-items: center;
     background-color: #000000;
     padding: 6px;
-    color: #DBE5EB;
     font-family: hpfont;
     height: 30px;
     font-size: 20px;
@@ -78,7 +77,8 @@ footer {
 .btn1, .btn2, .btn3 {
     padding: 20px;
     border: none;
-    /*background-color: transparent;*/
+    background-color: transparent;
+    color: #DBE5EB;
 }
 
 .legend {
