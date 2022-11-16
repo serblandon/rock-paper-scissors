@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     margin: 0;
     font-family: 'Berkshire Swash', cursive;
+    color: #DBE5EB;
 }
 
 header {
@@ -10,21 +11,19 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Alex Brush', cursive;
-    background-color: #11202A;
-    color: #F5F5DC;
+    font-family: hpfont;
+    background-color: #000000;
+    color: #DBE5EB;
 }
 
 .title {
     padding-bottom: 0px;
-    font-size: 50px;
+    font-size: 55px;
     margin-top: 30px;
-    margin-bottom: 6px;
+    margin-bottom: 0px;
 }
 
 .headertext {
-    padding-top: 0;
-    margin-top: 0px;
     font-size: 30px;
 }
 
@@ -34,7 +33,7 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 13px;
-    /*background-image: url("images/orion-g008e59802_1920.jpg");*/
+    background-image: url("images/orion-g008e59802_1920_964x544.jpg");
 }
 
 .choices {
@@ -46,6 +45,7 @@ main {
 .scorecard {
     display: flex;
     gap: 55px;
+    margin-top: 36px;
 }
 
 .you, .computer {
@@ -67,9 +67,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #172D3B;
+    background-color: #000000;
     padding: 6px;
-    color: aliceblue;
+    color: #DBE5EB;
     font-family: 'Alex Brush', cursive;
     height: 30px;
     font-size: 20px;
@@ -78,11 +78,15 @@ footer {
 .btn1, .btn2, .btn3 {
     padding: 20px;
     border: none;
-    background-color: transparent;
+    /*background-color: transparent;*/
 }
 
 .legend {
     font-size: 20px;
+}
+
+.legend > p {
+    margin-top: 0px;
 }
 
 .btn1_cnt > p, .btn2_cnt > p, .btn3_cnt > p {
@@ -112,7 +116,7 @@ footer {
   }
 
 .confundo {
-    color: #A020F0;
+    color: #af84db;
 }
 
 .expecto {
@@ -120,6 +124,10 @@ footer {
 }
 
 .petrificus {
-    color: #696969;
+    color: #FBBF77 ;
 }
 
+@font-face {
+    font-family: hpfont;
+    src: url(fonts/HarryP-MVZ6w.ttf);
+}
