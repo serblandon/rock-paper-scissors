@@ -113,7 +113,19 @@ footer {
     -webkit-transform: scale(1.3);
     transform: scale(1.1);
     transition: all .3s;
-  }
+}
+
+.btn1:hover {
+    color: #af84db !important;
+}
+
+.btn2:hover {
+    color: #99CCFF !important;
+}
+
+.btn3:hover {
+    color: #FBBF77 !important;
+}
 
 .confundo {
     color: #af84db;
