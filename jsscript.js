@@ -119,6 +119,10 @@ const you_choice = document.querySelector(".you").firstElementChild;
 //select computer choice image
 const comp_choice = document.querySelector(".computer").firstElementChild;
 
+//inititalise score variables
+let playerLives = 5;
+let computerLives = 5;
+
 btn_choice.forEach((button) => {
     button.addEventListener('click', () => {
         // initialise computer's choice
@@ -130,7 +134,6 @@ btn_choice.forEach((button) => {
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
             you_choice.style.color = "#af84db";
-            //console.log(playRound("rock", getcmp_choice));
             // if computer chose rock
             if(getcmp_choice === "Rock") {
                 //computer choice
@@ -138,6 +141,7 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
                 comp_choice.style.color = "#af84db";
+                //draw
             }
             if(getcmp_choice === "Paper") {
                 //computer choice
@@ -145,6 +149,8 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
                 comp_choice.style.color = "#99CCFF";
+                //computer wins
+                playerLives--;
             }
             if(getcmp_choice === "Scissors") {
                 //computer choice
@@ -152,14 +158,17 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
                 comp_choice.style.color = "#FBBF77";
+                //player wins
+                computerLives--;
             }
+            // play round
+            playRound("rock", getcmp_choice);
         }
         else if(button === btn_choice[1]) {
             you_choice.removeAttribute("style");
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
             you_choice.style.color = "#99CCFF";
-            //console.log(playRound("paper", getComputerChoice()));
             // if computer chose rock
             if(getcmp_choice === "Rock") {
                 //computer choice
@@ -167,6 +176,8 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
                 comp_choice.style.color = "#af84db";
+                //player wins
+                computerLives--;
             }
             if(getcmp_choice === "Paper") {
                 //computer choice
@@ -174,6 +185,7 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
                 comp_choice.style.color = "#99CCFF";
+                //draw
             }
             if(getcmp_choice === "Scissors") {
                 //computer choice
@@ -181,6 +193,9 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
                 comp_choice.style.color = "#FBBF77";
+
+                //computer wins
+                playerLives--;
             }
         }
         else {
@@ -188,7 +203,6 @@ btn_choice.forEach((button) => {
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
             you_choice.style.color = "#FBBF77";
-            //console.log(playRound("scissors", getComputerChoice()));
             // if computer chose rock
             if(getcmp_choice === "Rock") {
                 //computer choice
@@ -196,6 +210,8 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
                 comp_choice.style.color = "#af84db";
+                //computer wins
+                playerLives--;
             }
             if(getcmp_choice === "Paper") {
                 //computer choice
@@ -203,6 +219,8 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
                 comp_choice.style.color = "#99CCFF";
+                //player wins
+                computerLives--;
             }
             if(getcmp_choice === "Scissors") {
                 //computer choice
@@ -210,6 +228,7 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
                 comp_choice.style.color = "#FBBF77";
+                //draw
             }
         }
     })
