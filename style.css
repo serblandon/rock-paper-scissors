@@ -117,15 +117,15 @@ footer {
     transition: all .3s;
 }
 
-.btn1:hover {
+.btn1:hover, .btn1_cnt > p {
     color: #af84db !important;
 }
 
-.btn2:hover {
+.btn2:hover, .btn2_cnt > p {
     color: #99CCFF !important;
 }
 
-.btn3:hover {
+.btn3:hover, .btn3_cnt > p {
     color: #FBBF77 !important;
 }
 
