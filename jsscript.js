@@ -126,18 +126,21 @@ btn_choice.forEach((button) => {
             you_choice.removeAttribute("style");
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
+            you_choice.style.color = "#af84db";
             console.log(playRound("rock", getComputerChoice()));
         }
         else if(button === btn_choice[1]) {
             you_choice.removeAttribute("style");
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
+            you_choice.style.color = "#99CCFF";
             console.log(playRound("paper", getComputerChoice()));
         }
         else {
             you_choice.removeAttribute("style");
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
+            you_choice.style.color = "#FBBF77";
             console.log(playRound("scissors", getComputerChoice()));
         }
     })
