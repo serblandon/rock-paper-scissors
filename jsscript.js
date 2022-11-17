@@ -124,9 +124,13 @@ const score_you = document.querySelector(".you").lastElementChild;
 //select computer score
 const score_computer = document.querySelector(".computer").lastElementChild;
 
-//inititalise score variables
+//select round
+const round_now = document.querySelector(".round");
+
+//inititalise score variables and round
 let playerLives = 5;
 let computerLives = 5;
+let round = 0;
 
 btn_choice.forEach((button) => {
     button.addEventListener('click', () => {
@@ -242,5 +246,8 @@ btn_choice.forEach((button) => {
             score_you.textContent = `Your lives: ${playerLives}`;
             score_computer.textContent = `Opponent's lives: ${computerLives}`;
         }
+        //increaase round
+        round++;
+        round_now.textContent = `Round: ${round}`;
     })
 })
