@@ -1,4 +1,4 @@
-const rps = ["Rock", "Paper", "Scissors"];
+const rps = ["Rock", "Scissors", "Paper"];
 
 // returns the random indice corresponding to rock paper or scissors
 function getComputerChoice() {
@@ -127,10 +127,14 @@ const score_computer = document.querySelector(".computer").lastElementChild;
 //select round
 const round_now = document.querySelector(".round");
 
-//inititalise score variables and round
+//select commentary
+const commentary_now = document.querySelector(".commentary");
+
+//inititalise score variables and round and commentary
 let playerLives = 5;
 let computerLives = 5;
 let round = 0;
+let commentary = "";
 
 btn_choice.forEach((button) => {
     button.addEventListener('click', () => {
@@ -151,29 +155,33 @@ btn_choice.forEach((button) => {
                 comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
                 comp_choice.style.color = "#af84db";
                 //draw
-            }
-            if(getcmp_choice === "Paper") {
-                //computer choice
-                comp_choice.removeAttribute("style");
-                comp_choice.removeAttribute("class");
-                comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
-                comp_choice.style.color = "#99CCFF";
-                //computer wins
-                playerLives--;
+                commentary = "Duel Commentary: It's a Draw! You have to cast again!";
             }
             if(getcmp_choice === "Scissors") {
                 //computer choice
                 comp_choice.removeAttribute("style");
                 comp_choice.removeAttribute("class");
-                comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
-                comp_choice.style.color = "#FBBF77";
+                comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
+                comp_choice.style.color = "#99CCFF";
                 //player wins
                 computerLives--;
+                commentary = "Duel Commentary: You win! In order to cast a Patronus you must be able to focus your thoughts on things that make you happy.  Under a Confundus Charm you would be unable to focus."
+            }
+            if(getcmp_choice === "Paper") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
+                comp_choice.style.color = "#FBBF77";
+                //computer wins
+                playerLives--;
+                commentary = "Duel Commentary: You lose! You can't cast a curse if you can't move your arms.  Petrificus Totalus is the Full Body-Bind Curse and is pretty effective."
             }
             // play round
             //playRound("rock", getcmp_choice);
             score_you.textContent = `Your lives: ${playerLives}`;
             score_computer.textContent = `Opponent's lives: ${computerLives}`;
+            commentary_now.textContent = commentary;
         }
         else if(button === btn_choice[1]) {
             you_choice.removeAttribute("style");
@@ -187,29 +195,32 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
                 comp_choice.style.color = "#af84db";
-                //player wins
-                computerLives--;
+                //computer wins
+                playerLives--;
+                commentary = "Duel Commentary: You lose! In order to cast a Patronus you must be able to focus your thoughts on things that make you happy.  Under a Confundus Charm you would be unable to focus.";
             }
-            if(getcmp_choice === "Paper") {
+            if(getcmp_choice === "Scissors") {
                 //computer choice
                 comp_choice.removeAttribute("style");
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
                 comp_choice.style.color = "#99CCFF";
                 //draw
+                commentary = "Duel Commentary: It's a Draw! You have to cast again!";
             }
-            if(getcmp_choice === "Scissors") {
+            if(getcmp_choice === "Paper") {
                 //computer choice
                 comp_choice.removeAttribute("style");
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
                 comp_choice.style.color = "#FBBF77";
-
-                //computer wins
-                playerLives--;
+                //player wins
+                computerLives--;
+                commentary = "You win! Expecto Patronum is a simpler spell to cast if you know how to do it and a Patronus, when conjured properly, can have physical effect on its target.  Since it takes a bit more wand work to cast Petrificus Totalus, the Patronus would have your opponent on the ground before the spell could be cast.";
             }
             score_you.textContent = `Your lives: ${playerLives}`;
             score_computer.textContent = `Opponent's lives: ${computerLives}`;
+            commentary_now.textContent = commentary;
         }
         else {
             you_choice.removeAttribute("style");
@@ -223,28 +234,32 @@ btn_choice.forEach((button) => {
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
                 comp_choice.style.color = "#af84db";
-                //computer wins
-                playerLives--;
+                //player wins
+                computerLives--;
+                commentary = "Duel Commentary: You win! You can't cast a curse if you can't move your arms.  Petrificus Totalus is the Full Body-Bind Curse and is pretty effective.";
             }
-            if(getcmp_choice === "Paper") {
+            if(getcmp_choice === "Scissors") {
                 //computer choice
                 comp_choice.removeAttribute("style");
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
                 comp_choice.style.color = "#99CCFF";
-                //player wins
-                computerLives--;
+                //computer wins
+                playerLives--;
+                commentary = "Duel Commentary: You lose! Expecto Patronum is a simpler spell to cast if you know how to do it and a Patronus, when conjured properly, can have physical effect on its target.  Since it takes a bit more wand work to cast Petrificus Totalus, the Patronus would have your opponent on the ground before the spell could be cast.";
             }
-            if(getcmp_choice === "Scissors") {
+            if(getcmp_choice === "Paper") {
                 //computer choice
                 comp_choice.removeAttribute("style");
                 comp_choice.removeAttribute("class");
                 comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
                 comp_choice.style.color = "#FBBF77";
                 //draw
+                commentary = "Duel Commentary: It's a Draw! You have to cast again!";
             }
             score_you.textContent = `Your lives: ${playerLives}`;
             score_computer.textContent = `Opponent's lives: ${computerLives}`;
+            commentary_now.textContent = commentary;
         }
         //increaase round
         round++;
