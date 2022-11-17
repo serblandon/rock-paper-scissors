@@ -39,13 +39,14 @@ main {
 .choices {
     display: flex;
     gap: 75px;
-    padding-top: 20px;
+    padding-top: 8px;
 }
 
 .scorecard {
     display: flex;
     gap: 55px;
     margin-top: 36px;
+    margin-bottom: 10px;
 }
 
 .you, .computer {
