@@ -115,19 +115,29 @@ console.log(`Computer selection: ${computerSelection}`); */
 const btn_choice = document.querySelectorAll('button');
 
 //select my choice image
-/*const you_choice = document.querySelector(".you");
-console.dir(you_choice.firstElementChild);
-you_choice.setAttribute("class", "")*/
+const you_choice = document.querySelector(".you").firstElementChild;
+//console.dir(you_choice.firstElementChild);
 
 btn_choice.forEach((button) => {
     button.addEventListener('click', () => {
+        // see which button the user chose
+        // replace question mark with the icon associated with the spell
         if(button === btn_choice[0]) {
+            you_choice.removeAttribute("style");
+            you_choice.removeAttribute("class");
+            you_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
             console.log(playRound("rock", getComputerChoice()));
         }
         else if(button === btn_choice[1]) {
+            you_choice.removeAttribute("style");
+            you_choice.removeAttribute("class");
+            you_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
             console.log(playRound("paper", getComputerChoice()));
         }
         else {
+            you_choice.removeAttribute("style");
+            you_choice.removeAttribute("class");
+            you_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
             console.log(playRound("scissors", getComputerChoice()));
         }
     })
