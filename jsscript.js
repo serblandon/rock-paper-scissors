@@ -112,7 +112,7 @@ console.log(`Computer selection: ${computerSelection}`); */
 //game();
 
 //select all 3 buttons
-const btn_choice = document.querySelectorAll('button');
+const btn_choice = document.querySelectorAll('.btns');
 
 //select my choice image
 const you_choice = document.querySelector(".you").firstElementChild;
@@ -130,11 +130,24 @@ const round_now = document.querySelector(".round");
 //select commentary
 const commentary_now = document.querySelector(".commentary");
 
+//main
+const main = document.querySelector("main");
+
+//playagain
+const playagain = document.querySelector(".playagain");
+
 //inititalise score variables and round and commentary
 let playerLives = 5;
 let computerLives = 5;
 let round = 0;
 let commentary = "";
+
+// function for playagain
+function resetGame() {
+    playagain.addEventListener('click', () => {
+      window.location.reload();
+    });
+  }
 
 btn_choice.forEach((button) => {
     button.addEventListener('click', () => {
@@ -276,6 +289,9 @@ btn_choice.forEach((button) => {
                 item.disabled = true;
             }
                 )
+            playagain.style.visibility = "visible";
+            resetGame();
+
         }
         if(computerLives == 0) {
             commentary = "Congratulations! You won this duel! You got the better out of your opponent!";
@@ -284,6 +300,8 @@ btn_choice.forEach((button) => {
                 item.disabled = true;
             }
                 )
+            playagain.style.visibility = "visible";
+            resetGame();
         }
     })
 })

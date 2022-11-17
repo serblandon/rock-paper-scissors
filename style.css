@@ -65,14 +65,15 @@ main {
 }
 
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
+    background-color: transparent;
     padding: 6px;
     font-family: hpfont;
     height: 30px;
     font-size: 20px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .btn1, .btn2, .btn3 {
@@ -144,4 +145,26 @@ footer {
 @font-face {
     font-family: hpfont;
     src: url(fonts/HarryP-MVZ6w.ttf);
+}
+
+.playagain {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    font-family: hpfont;
+    font-size: 32px;
+    background-color: transparent;
+    color: #DBE5EB;
+    margin-bottom: 47px;
+    margin-top: 2px;
+    border: none;
+}
+
+.playagain:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.3);
+    transform: scale(1.4);
+    transition: all .3s;
+    background-color: #DBE5EB;
+    color: #000000;
 }
