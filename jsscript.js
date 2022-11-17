@@ -140,6 +140,7 @@ btn_choice.forEach((button) => {
     button.addEventListener('click', () => {
         // initialise computer's choice
         let getcmp_choice = getComputerChoice();
+
         // see which button the user chose
         // replace question mark with the icon associated with the spell
         if(button === btn_choice[0]) {
@@ -260,9 +261,29 @@ btn_choice.forEach((button) => {
             score_you.textContent = `Your lives: ${playerLives}`;
             score_computer.textContent = `Opponent's lives: ${computerLives}`;
             commentary_now.textContent = commentary;
+
         }
         //increaase round
         round++;
         round_now.textContent = `Round: ${round}`;
+
+        //stop condition
+        //last message
+        if(playerLives == 0) {
+            commentary = "You lost this duel! The opponent beat you in a fair fight!";
+            commentary_now.textContent = commentary;
+            btn_choice.forEach(item => {
+                item.disabled = true;
+            }
+                )
+        }
+        if(computerLives == 0) {
+            commentary = "Congratulations! You won this duel! You got the better out of your opponent!";
+            commentary_now.textContent = commentary;
+            btn_choice.forEach(item => {
+                item.disabled = true;
+            }
+                )
+        }
     })
 })
