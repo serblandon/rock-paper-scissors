@@ -119,6 +119,11 @@ const you_choice = document.querySelector(".you").firstElementChild;
 //select computer choice image
 const comp_choice = document.querySelector(".computer").firstElementChild;
 
+//select player score
+const score_you = document.querySelector(".you").lastElementChild;
+//select computer score
+const score_computer = document.querySelector(".computer").lastElementChild;
+
 //inititalise score variables
 let playerLives = 5;
 let computerLives = 5;
@@ -162,7 +167,9 @@ btn_choice.forEach((button) => {
                 computerLives--;
             }
             // play round
-            playRound("rock", getcmp_choice);
+            //playRound("rock", getcmp_choice);
+            score_you.textContent = `Your lives: ${playerLives}`;
+            score_computer.textContent = `Opponent's lives: ${computerLives}`;
         }
         else if(button === btn_choice[1]) {
             you_choice.removeAttribute("style");
@@ -197,6 +204,8 @@ btn_choice.forEach((button) => {
                 //computer wins
                 playerLives--;
             }
+            score_you.textContent = `Your lives: ${playerLives}`;
+            score_computer.textContent = `Opponent's lives: ${computerLives}`;
         }
         else {
             you_choice.removeAttribute("style");
@@ -230,6 +239,8 @@ btn_choice.forEach((button) => {
                 comp_choice.style.color = "#FBBF77";
                 //draw
             }
+            score_you.textContent = `Your lives: ${playerLives}`;
+            score_computer.textContent = `Opponent's lives: ${computerLives}`;
         }
     })
 })
