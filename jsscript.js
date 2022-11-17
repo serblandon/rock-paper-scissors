@@ -116,10 +116,13 @@ const btn_choice = document.querySelectorAll('button');
 
 //select my choice image
 const you_choice = document.querySelector(".you").firstElementChild;
-//console.dir(you_choice.firstElementChild);
+//select computer choice image
+const comp_choice = document.querySelector(".computer").firstElementChild;
 
 btn_choice.forEach((button) => {
     button.addEventListener('click', () => {
+        // initialise computer's choice
+        let getcmp_choice = getComputerChoice();
         // see which button the user chose
         // replace question mark with the icon associated with the spell
         if(button === btn_choice[0]) {
@@ -127,21 +130,87 @@ btn_choice.forEach((button) => {
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
             you_choice.style.color = "#af84db";
-            console.log(playRound("rock", getComputerChoice()));
+            //console.log(playRound("rock", getcmp_choice));
+            // if computer chose rock
+            if(getcmp_choice === "Rock") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
+                comp_choice.style.color = "#af84db";
+            }
+            if(getcmp_choice === "Paper") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
+                comp_choice.style.color = "#99CCFF";
+            }
+            if(getcmp_choice === "Scissors") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
+                comp_choice.style.color = "#FBBF77";
+            }
         }
         else if(button === btn_choice[1]) {
             you_choice.removeAttribute("style");
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
             you_choice.style.color = "#99CCFF";
-            console.log(playRound("paper", getComputerChoice()));
+            //console.log(playRound("paper", getComputerChoice()));
+            // if computer chose rock
+            if(getcmp_choice === "Rock") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
+                comp_choice.style.color = "#af84db";
+            }
+            if(getcmp_choice === "Paper") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
+                comp_choice.style.color = "#99CCFF";
+            }
+            if(getcmp_choice === "Scissors") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
+                comp_choice.style.color = "#FBBF77";
+            }
         }
         else {
             you_choice.removeAttribute("style");
             you_choice.removeAttribute("class");
             you_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
             you_choice.style.color = "#FBBF77";
-            console.log(playRound("scissors", getComputerChoice()));
+            //console.log(playRound("scissors", getComputerChoice()));
+            // if computer chose rock
+            if(getcmp_choice === "Rock") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-face-dizzy fa-4x");
+                comp_choice.style.color = "#af84db";
+            }
+            if(getcmp_choice === "Paper") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-bolt fa-4x");
+                comp_choice.style.color = "#99CCFF";
+            }
+            if(getcmp_choice === "Scissors") {
+                //computer choice
+                comp_choice.removeAttribute("style");
+                comp_choice.removeAttribute("class");
+                comp_choice.setAttribute("class", "fa-solid fa-lock fa-4x");
+                comp_choice.style.color = "#FBBF77";
+            }
         }
     })
 })
