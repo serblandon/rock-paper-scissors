@@ -61,7 +61,7 @@ function getChoices(plyrChoice, cmptChoice) {
 }
 
 // game function
-function game() {
+/*function game() {
     // initialize and declare score cards for both players
     let playerScore = 0;
     let computerScore = 0;
@@ -98,7 +98,7 @@ function game() {
     else {
         console.log("You lost the game! You were beaten by the computer!");
     }
-}
+}/*
 
 
 /* call the playround function for a single round
@@ -109,4 +109,26 @@ console.log(`\nPlayer selection: ${playerSelection}`);
 console.log(`Computer selection: ${computerSelection}`); */
 
 // test game function best of five
-game();
+//game();
+
+//select all 3 buttons
+const btn_choice = document.querySelectorAll('button');
+
+//select my choice image
+/*const you_choice = document.querySelector(".you");
+console.dir(you_choice.firstElementChild);
+you_choice.setAttribute("class", "")*/
+
+btn_choice.forEach((button) => {
+    button.addEventListener('click', () => {
+        if(button === btn_choice[0]) {
+            console.log(playRound("rock", getComputerChoice()));
+        }
+        else if(button === btn_choice[1]) {
+            console.log(playRound("paper", getComputerChoice()));
+        }
+        else {
+            console.log(playRound("scissors", getComputerChoice()));
+        }
+    })
+})
