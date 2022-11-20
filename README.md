@@ -7,9 +7,9 @@
 # Game in Console - First part
 -Basic Console Rock Paper Scissors <br />
 What i learned: <br />
-*loops <br />
-*functions <br />
-*implementation of basic functionalities in javascript <br />
+* loops <br />
+* functions <br />
+* implementation of basic functionalities in javascript <br />
 
 # credits
 -duel commentary: https://geekmom.com/2010/11/geekmom-hacks-harry-potter-wizards-dueling-is-for-everyone/ <br />
