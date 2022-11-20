@@ -3,7 +3,7 @@
 * This is my first HTML, CSS and JavaScript project.
 
 # Website-Link
-[Go To Wizarding-Duel]()
+[Go To Wizarding-Duel](https://serblandon.github.io/rock-paper-scissors/)
 
 ## Description ##
 * The game is basically a "Rock Paper Scissors" game with a Harry Potter theme
