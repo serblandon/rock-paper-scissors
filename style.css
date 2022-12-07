@@ -4,6 +4,10 @@ body {
     margin: 0;
     font-family: 'Berkshire Swash', cursive;
     color: #DBE5EB;
+    height: auto;
+    width: auto;
+    background-image: url("images/pexels-aleksandar-pasaric-1694000.jpg");
+    background-size: contain;
 }
 
 header {
@@ -12,7 +16,6 @@ header {
     align-items: center;
     justify-content: center;
     font-family: hpfont;
-    background-color: #000000;
     color: #DBE5EB;
 }
 
@@ -33,7 +36,7 @@ main {
     justify-content: center;
     align-items: center;
     padding-top: 13px;
-    background-image: url("images/orion-g008e59802_1920_964x544.jpg");
+    
 }
 
 .choices {
@@ -70,10 +73,8 @@ footer {
     font-family: hpfont;
     height: 30px;
     font-size: 20px;
-    position: fixed;
     bottom: 0;
     text-align: center;
-    width: 100%;
 }
 
 .btn1, .btn2, .btn3 {
@@ -155,7 +156,7 @@ footer {
     font-size: 32px;
     background-color: transparent;
     color: #DBE5EB;
-    margin-bottom: 77px;
+    margin-bottom: 20px;
     margin-top: 12px;
     border: none;
 }
